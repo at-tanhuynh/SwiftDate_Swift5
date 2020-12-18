@@ -238,7 +238,7 @@ public class DateInRegionFormatter {
 	/// - Parameter component: target components
 	/// - Returns: true or false
 	private func hasLowerAllowedComponents(than component: Calendar.Component) -> Bool {
-		guard let fIndex = timeOrderedComponents.index(of: component) else {
+		guard let fIndex = timeOrderedComponents.firstIndex(of: component) else {
 			// this should happend only if calendar component is not part of allowed components
 			// so, in fact, this should not never happends
 			return false
